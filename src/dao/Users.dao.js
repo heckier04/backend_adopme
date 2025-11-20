@@ -14,13 +14,12 @@ export default class Users {
         return userModel.create(doc);
     }
 
-    
     createMany = async (docs) => {
         return userModel.insertMany(docs);
     }
 
     update = (id, doc) => {
-        return userModel.findByIdAndUpdate(id, { $set: doc });
+        return userModel.findByIdAndUpdate(id, { $set: doc }, { new: true });
     }
 
     delete = (id) => {

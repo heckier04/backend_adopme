@@ -8,7 +8,6 @@ const router = express.Router();
 const usersDao = new UsersDao();
 const petsDao = new PetsDao();
 
-// 🔹 Endpoint 1: /api/mocks/mockingpets
 router.get('/mockingpets', async (req, res) => {
   try {
     const pets = Array.from({ length: 100 }, generatePet);
@@ -18,7 +17,6 @@ router.get('/mockingpets', async (req, res) => {
   }
 });
 
-// 🔹 Endpoint 2: /api/mocks/mockingusers
 router.get('/mockingusers', async (req, res) => {
   try {
     const users = Array.from({ length: 50 }, generateUser);
@@ -28,7 +26,6 @@ router.get('/mockingusers', async (req, res) => {
   }
 });
 
-// 🔹 Endpoint 3: /api/mocks/generateData
 router.post('/generateData', async (req, res) => {
   try {
     const { users = 0, pets = 0 } = req.body;

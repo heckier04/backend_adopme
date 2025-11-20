@@ -4,16 +4,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js",
-    "test": "mocha test/supertest.test.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "mocha test/adoption.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
-    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.3",
     "compression": "^1.8.1",
     "cookie-parser": "^1.4.6",
     "dotenv": "^17.2.3",
@@ -22,12 +22,17 @@
     "mongoose": "^6.13.8",
     "multer": "^1.4.5-lts.1",
     "supertest": "^6.3.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
     "winston": "^3.18.3"
   },
   "devDependencies": {
     "chai": "^4.3.7",
+    "cross-env": "^10.1.0",
+    "eslint": "^9.39.1",
     "mocha": "^10.1.0",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
   },
   "description": ""
 }

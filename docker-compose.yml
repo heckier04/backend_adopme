@@ -12,8 +12,7 @@ services:
     depends_on:
       - mongo
     volumes:
-      - .:/app             # monta tu código local
-      - /app/node_modules  # evita sobrescribir los módulos instalados en Linux
+      - .:/app            
     command: npm start
 
   mongo:
